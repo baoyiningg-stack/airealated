@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<!-- saved from url=(0123)file:///Users/frank/Documents/Codex/2026-06-12/apple-https-www-apple-com-leadership/outputs/ai_beginner_map.html#tool-skill -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 入门五层地图</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --panel: #ffffff;
+      --ink: #172033;
+      --muted: #667085;
+      --line: #d8deea;
+      --blue: #2563eb;
+      --teal: #0f8b8d;
+      --green: #168a5b;
+      --amber: #b7791f;
+      --violet: #7c3aed;
+      --rose: #c2415d;
+      --shadow: 0 18px 46px rgba(31, 41, 55, .08);
+      --radius: 8px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, .94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+    }
+
+    .topbar {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 18px 28px;
+      display: grid;
+      grid-template-columns: minmax(320px, 1fr) auto;
+      gap: 22px;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .sub {
+      margin: 7px 0 0;
+      max-width: 900px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav a {
+      color: var(--ink);
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    main {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 26px 28px 56px;
+    }
+
+    section { margin-bottom: 26px; }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .section-title {
+      margin: 0 0 14px;
+      font-size: 21px;
+      line-height: 1.2;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+      margin: 10px 0 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr);
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .lead {
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, #eef5ff, #f8fbff);
+      border: 1px solid #cfe0ff;
+      padding: 20px;
+      display: grid;
+      align-content: center;
+      gap: 12px;
+    }
+
+    .lead h2 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.25;
+    }
+
+    .lead p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 15px;
+    }
+
+    .one-line {
+      display: grid;
+      gap: 10px;
+    }
+
+    .one-line div {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 13px 14px;
+      background: #fff;
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .one-line strong {
+      color: var(--blue);
+      font-size: 14px;
+    }
+
+    .one-line span {
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 14px;
+    }
+
+    .stack {
+      display: grid;
+      gap: 12px;
+    }
+
+    .stack-row {
+      display: grid;
+      grid-template-columns: 190px 1fr 250px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .stack-label {
+      color: #fff;
+      font-weight: 700;
+      padding: 16px;
+      display: grid;
+      align-content: center;
+    }
+
+    .stack-row:nth-child(1) .stack-label { background: var(--violet); }
+    .stack-row:nth-child(2) .stack-label { background: var(--teal); }
+    .stack-row:nth-child(3) .stack-label { background: var(--blue); }
+    .stack-row:nth-child(4) .stack-label { background: var(--green); }
+    .stack-row:nth-child(5) .stack-label { background: var(--amber); }
+
+    .stack-body, .stack-example {
+      padding: 15px;
+    }
+
+    .stack-body strong, .stack-example strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .stack-body p, .stack-example p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 13px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      padding: 16px;
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .card p, .card li {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.58;
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .ability-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      background: #fff;
+    }
+
+    .ability-card.model { border-top: 4px solid var(--green); }
+    .ability-card.tool { border-top: 4px solid var(--amber); }
+
+    .ability-card h3 {
+      margin: 0 0 12px;
+      font-size: 16px;
+    }
+
+    .ability-card li {
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .product-formula {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(110px, 1fr));
+      gap: 10px;
+      align-items: center;
+    }
+
+    .formula-item {
+      min-height: 88px;
+      border: 1px solid rgba(0, 0, 0, .08);
+      border-radius: var(--radius);
+      padding: 13px;
+      display: grid;
+      align-content: center;
+      gap: 5px;
+      text-align: center;
+      background: #eef5ff;
+    }
+
+    .formula-item:nth-child(2) { background: #ecfdf5; }
+    .formula-item:nth-child(3) { background: #fff7e6; }
+    .formula-item:nth-child(4) { background: #f5f0ff; }
+    .formula-item:nth-child(5) { background: #ffeef3; }
+    .formula-item:nth-child(6) { background: #f0f9ff; }
+
+    .formula-item strong {
+      font-size: 14px;
+    }
+
+    .formula-item span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .agent-loop {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .loop-step {
+      border-radius: var(--radius);
+      padding: 14px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      min-height: 104px;
+    }
+
+    .loop-step b {
+      display: inline-grid;
+      place-items: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      margin-bottom: 9px;
+    }
+
+    .loop-step strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .loop-step span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .builder {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .build-controls {
+      display: grid;
+      gap: 10px;
+    }
+
+    .build-toggle {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      text-align: left;
+      min-height: auto;
+      padding: 13px;
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .build-toggle.active {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, .12);
+    }
+
+    .build-toggle .check {
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: #fff;
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    .build-toggle.active .check {
+      background: var(--blue);
+      border-color: var(--blue);
+    }
+
+    .build-toggle .check {
+      border-radius: 50%;
+      font-size: 12px;
+    }
+
+    .build-toggle strong {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 14px;
+    }
+
+    .build-toggle span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .build-output {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fbfcff;
+      padding: 18px;
+      min-height: 360px;
+    }
+
+    .agent-diagram {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(120px, 1fr));
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .agent-block {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      padding: 12px;
+      min-height: 96px;
+      display: grid;
+      gap: 6px;
+      align-content: start;
+      opacity: .38;
+    }
+
+    .agent-block.on {
+      opacity: 1;
+      border-color: #a9c3ff;
+      background: #f5f8ff;
+    }
+
+    .agent-block strong {
+      font-size: 14px;
+    }
+
+    .agent-block span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    .build-result {
+      display: grid;
+      gap: 10px;
+    }
+
+    .build-result h3 {
+      margin: 0;
+      font-size: 17px;
+    }
+
+    .build-result p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .mock-chat {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .chat-head {
+      padding: 11px 14px;
+      background: #f8fafc;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .chat-body {
+      padding: 14px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .bubble {
+      max-width: 86%;
+      border-radius: 12px;
+      padding: 11px 13px;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .bubble.user {
+      justify-self: end;
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .bubble.ai {
+      justify-self: start;
+      background: #f1f5f9;
+      color: var(--ink);
+    }
+
+    .action-log {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fbfcff;
+      padding: 12px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .action-log strong {
+      font-size: 13px;
+    }
+
+    .log-item {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 8px;
+      align-items: start;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .log-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #dbeafe;
+      color: #1d4ed8;
+      font-size: 11px;
+      margin-top: 1px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      min-width: 920px;
+    }
+
+    .table-wrap { overflow: auto; }
+
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      line-height: 1.45;
+    }
+
+    th {
+      background: #f8fafc;
+      color: #344054;
+    }
+
+    td {
+      color: var(--muted);
+    }
+
+    .pill {
+      display: inline-flex;
+      border-radius: 999px;
+      padding: 4px 8px;
+      margin: 2px 4px 2px 0;
+      background: #eef2ff;
+      color: #3440a1;
+      font-size: 12px;
+    }
+
+    .token-tool {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 150px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 12px;
+      resize: vertical;
+      background: #fff;
+      color: var(--ink);
+      line-height: 1.5;
+      font: inherit;
+    }
+
+    select, input, button {
+      font: inherit;
+    }
+
+    select, input {
+      min-height: 38px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      color: var(--ink);
+      padding: 0 10px;
+      min-width: 0;
+    }
+
+    button {
+      min-height: 38px;
+      border: 1px solid var(--blue);
+      background: var(--blue);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 0 12px;
+      cursor: pointer;
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .stat {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 12px;
+      background: #fbfcff;
+    }
+
+    .stat b {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 3px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .tokens {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      min-height: 120px;
+      background: #fff;
+      align-content: flex-start;
+    }
+
+    .tok {
+      border-radius: 6px;
+      padding: 5px 8px;
+      font-size: 13px;
+      background: #e8f1ff;
+      border: 1px solid #bdd3ff;
+    }
+
+    .tok.zh { background: #ecfdf5; border-color: #b7e4ce; }
+    .tok.punc { background: #fff7e6; border-color: #f3d29b; }
+    .tok.space { background: #f2f4f7; border-color: #d0d5dd; color: #667085; }
+
+    .chooser {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 16px;
+    }
+
+    .choice-list {
+      display: grid;
+      gap: 9px;
+    }
+
+    .choice {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      color: var(--ink);
+      text-align: left;
+      padding: 13px;
+      min-height: auto;
+    }
+
+    .choice.active {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, .12);
+    }
+
+    .choice-output {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fbfcff;
+      padding: 18px;
+      min-height: 220px;
+    }
+
+    .choice-output h3 {
+      margin: 0 0 10px;
+    }
+
+    .choice-output p {
+      color: var(--muted);
+      line-height: 1.65;
+      margin: 0 0 10px;
+    }
+
+    .source-list a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .source-list a:hover { text-decoration: underline; }
+
+    @media (max-width: 1080px) {
+      .topbar, .hero-grid, .split, .token-tool, .chooser, .builder { grid-template-columns: 1fr; }
+      nav { justify-content: flex-start; }
+      .stack-row { grid-template-columns: 1fr; }
+      .cols-4, .agent-loop, .agent-diagram, .product-formula { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 640px) {
+      main, .topbar { padding-left: 16px; padding-right: 16px; }
+      h1 { font-size: 23px; }
+      .cols-2, .cols-3, .cols-4, .agent-loop, .agent-diagram, .product-formula, .stats, .controls { grid-template-columns: 1fr; }
+      .one-line div { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div>
+        <h1>AI 入门五层地图：从底层模型到你手里的产品</h1>
+        <p class="sub">一条主线讲清楚：模型层、能力层、产品层、Agent 层、开发者层。读完你应该能分清 ChatGPT、DeepSeek、Claude Code、API、Token、RAG、Skill 各自在哪里。</p>
+      </div>
+      <nav>
+        <a href="file:///Users/frank/Documents/Codex/2026-06-12/apple-https-www-apple-com-leadership/outputs/ai_beginner_map.html#overview">总览</a>
+        <a href="file:///Users/frank/Documents/Codex/2026-06-12/apple-https-www-apple-com-leadership/outputs/ai_beginner_map.html#model">模型层</a>
+        <a href="file:///Users/frank/Documents/Codex/2026-06-12/apple-https-www-apple-com-leadership/outputs/ai_beginner_map.html#ability">能力层</a>
+        <a href="file:///Users/frank/Documents/Codex/2026-06-12/apple-https-www-apple-com-leadership/outputs/ai_beginner_map.html#product">产品层</a>
+        <a href="file:///Users/frank/Documents/Codex/2026-06-12/apple-https-www-apple-com-leadership/outputs/ai_beginner_map.html#agent">Agent 层</a>
+        <a href="file:///Users/frank/Documents/Codex/2026-06-12/apple-https-www-apple-com-leadership/outputs/ai_beginner_map.html#tool-skill">工具/Skill</a>
+        <a href="file:///Users/frank/Documents/Codex/2026-06-12/apple-https-www-apple-com-leadership/outputs/ai_beginner_map.html#developer">开发者层</a>
+        <a href="file:///Users/frank/Documents/Codex/2026-06-12/apple-https-www-apple-com-leadership/outputs/ai_beginner_map.html#token">Token 工具</a>
+        <a href="file:///Users/frank/Documents/Codex/2026-06-12/apple-https-www-apple-com-leadership/outputs/ai_beginner_map.html#companies">公司地图</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="overview" class="panel">
+      <div class="hero-grid">
+        <div class="lead">
+          <h2>先记住这一句：AI 产品不是一个东西，而是一套层层叠加的系统。</h2>
+          <p>大模型是底层“大脑”；产品把模型包装成你能使用的界面；工具让模型能接触外部世界；Agent 让模型从回答问题变成执行任务；API 让开发者把这些能力接进自己的系统。</p>
+        </div>
+        <div class="one-line">
+          <div><strong>模型层</strong><span>AI 的大脑：负责理解、推理和生成。</span></div>
+          <div><strong>能力层</strong><span>能处理什么材料：文字、代码、图片、音频、文件。</span></div>
+          <div><strong>产品层</strong><span>你实际打开的入口：ChatGPT、Claude、DeepSeek、Kimi。</span></div>
+          <div><strong>Agent 层</strong><span>从“回答”升级为“办事”：规划、调用工具、检查结果。</span></div>
+          <div><strong>开发者层</strong><span>把 AI 接入业务：API、Token 计费、RAG、Embedding、微调。</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 class="section-title">五层结构总图</h2>
+      <div class="stack">
+        <div class="stack-row">
+          <div class="stack-label">第 5 层：开发者层</div>
+          <div class="stack-body"><strong>把 AI 接进自己的系统</strong><p>用 API、企业平台、RAG、向量库、权限和成本控制，把模型能力变成业务能力。</p></div>
+          <div class="stack-example"><strong>关键词</strong><p>API、Token 计费、RAG、Embedding、Fine-tuning、企业平台。</p></div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-label">第 4 层：Agent 层</div>
+          <div class="stack-body"><strong>从聊天变成办事</strong><p>模型围绕目标拆步骤，调用工具，执行动作，检查结果，必要时继续迭代。</p></div>
+          <div class="stack-example"><strong>例子</strong><p>Claude Code、Codex、Cursor Agent、Devin、Deep Research。</p></div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-label">第 3 层：产品层</div>
+          <div class="stack-body"><strong>普通用户真正使用的入口</strong><p>产品把模型、界面、工具、文件、账号、额度、安全策略组合起来。</p></div>
+          <div class="stack-example"><strong>例子</strong><p>ChatGPT、Claude、DeepSeek、Gemini、Kimi、豆包、通义。</p></div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-label">第 2 层：能力层</div>
+          <div class="stack-body"><strong>能处理哪些材料</strong><p>有些来自模型本身，有些来自外接工具。这里最容易混淆。</p></div>
+          <div class="stack-example"><strong>例子</strong><p>写代码、看图、联网搜索、读文件、生成网页、运行命令。</p></div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-label">第 1 层：模型层</div>
+          <div class="stack-body"><strong>AI 的底层大脑</strong><p>输入内容，模型计算，然后输出内容。它是能力底座，但不是完整产品。</p></div>
+          <div class="stack-example"><strong>例子</strong><p>GPT、Claude、Gemini、DeepSeek、Qwen、GLM、Kimi 模型。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="model" class="panel">
+      <h2 class="section-title">第一层：模型层，AI 的“大脑”</h2>
+      <div class="grid cols-4">
+        <div class="card"><strong>大模型</strong><p>用海量数据训练出来的通用模型。它能根据输入预测和生成输出。你可以把它理解为“会读、会写、会推理的语言大脑”。</p></div>
+        <div class="card"><strong>Token</strong><p>模型读写内容的计量单位。可以是一个汉字、一个英文词的一部分、数字、标点或空格。API 常按 token 收费。</p></div>
+        <div class="card"><strong>上下文窗口</strong><p>模型一次能看见的最大内容长度。窗口越大，越适合读长文档、长代码库、多轮对话。</p></div>
+        <div class="card"><strong>多模态 / 推理模型</strong><p>多模态是能处理文字、图像、音频、视频等；推理模型更擅长复杂步骤、数学、代码和规划。</p></div>
+      </div>
+      <p class="note">关键边界：模型本身通常是“输入内容 → 输出内容”。能不能操作文件、生成网页、联网搜索，要看上层产品和工具。</p>
+    </section>
+
+    <section id="ability" class="panel">
+      <h2 class="section-title">第二层：能力层，分清“模型自带”和“工具增强”</h2>
+      <div class="split">
+        <div class="ability-card model">
+          <h3>模型自带能力</h3>
+          <ul>
+            <li>理解和生成文字：解释、写作、总结、翻译。</li>
+            <li>写代码和读代码：生成函数、解释报错、重构建议。</li>
+            <li>图像/音频/视频理解：前提是模型支持多模态。</li>
+            <li>推理和规划：把复杂问题拆成步骤。</li>
+          </ul>
+        </div>
+        <div class="ability-card tool">
+          <h3>工具增强能力</h3>
+          <ul>
+            <li>联网搜索：模型调用搜索工具拿最新资料。</li>
+            <li>读写文件：产品给模型文件系统或文档工具。</li>
+            <li>运行代码：产品提供终端、沙箱或解释器。</li>
+            <li>生成网页/文件：模型写内容，工具保存和预览。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="table-wrap" style="margin-top:14px">
+        <table>
+          <thead><tr><th>工具类型</th><th>你看到的表现</th><th>背后大概发生什么</th><th>例子</th></tr></thead>
+          <tbody>
+            <tr><td>搜索工具</td><td>AI 能回答最新新闻、价格、政策</td><td>聊天模型决定搜索关键词，调用搜索/浏览器工具，读网页后再总结</td><td>ChatGPT 搜索、Gemini Search grounding、Deep Research</td></tr>
+            <tr><td>文件工具</td><td>AI 能读 PDF、生成 Word/Excel/PPT</td><td>产品把文件解析成文本/表格/图片，模型理解内容，再由文档工具保存成文件</td><td>ChatGPT 文件分析、Claude Artifacts、办公类 AI 助手</td></tr>
+            <tr><td>代码/终端工具</td><td>AI 能创建网页、改代码、跑测试</td><td>模型写代码，文件工具保存，终端执行命令，浏览器或测试工具检查结果</td><td>Claude Code、Codex、Cursor Agent</td></tr>
+            <tr><td>图片生成工具</td><td>AI 能按文字生成图片或改图</td><td>聊天模型把需求整理成图像提示词，再调用图像生成模型/API，返回图片文件或链接</td><td>ChatGPT 图片生成、Gemini 图像能力、海螺/豆包/即梦等图像或视频工具</td></tr>
+            <tr><td>数据库/业务系统工具</td><td>AI 能查订单、改工单、发消息</td><td>模型生成结构化参数，调用公司内部 API；通常需要权限、审计和人工确认</td><td>客服 Agent、销售助手、企业工作流 Agent</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="grid cols-3" style="margin-top:14px">
+        <div class="card"><strong>图片生成方式 A：模型自己会画</strong><p>有些多模态模型本身就支持图像生成。用户输入文字，模型直接输出图片结果。对用户来说像聊天，对底层来说是图像生成能力。</p></div>
+        <div class="card"><strong>图片生成方式 B：聊天模型调用画图工具</strong><p>更常见的产品形态是：聊天模型先理解你的需求，把它改写成更适合生成的提示词，再调用一个图像生成模型/API。</p></div>
+        <div class="card"><strong>你看到的“生成图片”其实是产品能力</strong><p>产品负责排队、计费、尺寸、风格、安全审核、保存图片、展示下载按钮。模型只是一部分，工具和产品流程同样重要。</p></div>
+      </div>
+      <p class="note">所以 DeepSeek 网页版如果只是聊天，不代表模型不会写网页或构思图片，而是当前入口没有给它“创建文件、运行代码、预览网页、调用图像生成器”的工具链。</p>
+    </section>
+
+    <section id="product" class="panel">
+      <h2 class="section-title">第三层：产品层，你实际打开的入口</h2>
+      <div class="product-formula">
+        <div class="formula-item"><strong>模型</strong><span>底层能力</span></div>
+        <div class="formula-item"><strong>界面</strong><span>聊天框、文件区</span></div>
+        <div class="formula-item"><strong>工具</strong><span>搜索、代码、图片</span></div>
+        <div class="formula-item"><strong>账号</strong><span>历史、记忆、权限</span></div>
+        <div class="formula-item"><strong>额度</strong><span>会员、频率、上限</span></div>
+        <div class="formula-item"><strong>安全策略</strong><span>能做/不能做</span></div>
+      </div>
+      <div class="grid cols-3" style="margin-top:14px">
+        <div class="card"><strong>ChatGPT / Claude / Gemini</strong><p>通常是综合型 AI 产品：聊天、文件、图片、语音、搜索、项目、代码等能力按套餐开放。</p></div>
+        <div class="card"><strong>DeepSeek / Kimi / 豆包 / 通义</strong><p>也是产品入口。不同产品接的工具、文件能力、联网能力、上下文长度和额度不同。</p></div>
+        <div class="card"><strong>Claude Code / Codex / Cursor</strong><p>它们更像开发者工作台，重点不是聊天，而是在代码环境里执行任务。</p></div>
+      </div>
+    </section>
+
+    <section id="agent" class="panel">
+      <h2 class="section-title">第四层：Agent 层，从“回答问题”到“完成任务”</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>维度</th><th>普通聊天模式</th><th>Agent 模式</th></tr></thead>
+          <tbody>
+            <tr><td>用户输入</td><td>一个问题或一句指令</td><td>一个目标或任务</td></tr>
+            <tr><td>AI 输出</td><td>主要是一段回答</td><td>过程加结果，可能包含文件、代码、报告、网页</td></tr>
+            <tr><td>是否规划</td><td>不明显，通常一次一答</td><td>会拆步骤、排顺序、决定先做什么</td></tr>
+            <tr><td>是否调用工具</td><td>少量或没有</td><td>经常调用搜索、文件、终端、浏览器、数据库</td></tr>
+            <tr><td>是否检查结果</td><td>多数靠用户判断</td><td>会运行测试、看页面、检查错误、继续修改</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 class="section-title" style="font-size:17px;margin-top:18px">Agent 的工作循环</h3>
+      <div class="agent-loop">
+        <div class="loop-step"><b>1</b><strong>理解目标</strong><span>先判断你真正想完成什么。</span></div>
+        <div class="loop-step"><b>2</b><strong>制定计划</strong><span>拆步骤，决定顺序和风险。</span></div>
+        <div class="loop-step"><b>3</b><strong>调用工具</strong><span>搜索、读文件、运行代码。</span></div>
+        <div class="loop-step"><b>4</b><strong>执行动作</strong><span>写文件、改代码、生成结果。</span></div>
+        <div class="loop-step"><b>5</b><strong>检查反馈</strong><span>看是否成功，有没有错误。</span></div>
+        <div class="loop-step"><b>6</b><strong>迭代完成</strong><span>修正问题，直到交付。</span></div>
+      </div>
+      <p class="note">常见 Agent 或 Agent 模式产品：Claude Code、OpenAI Codex、Cursor Agent、Devin、Replit Agent、ChatGPT Deep Research/Agent、部分企业智能体平台。普通 ChatGPT/Claude/Kimi/豆包在调用工具、多步执行时，也可以呈现 Agent 化体验。</p>
+    </section>
+
+    <section id="tool-skill" class="panel">
+      <h2 class="section-title">工具和 Skill：Agent 的“手脚”和“方法包”</h2>
+      <div class="split">
+        <div class="ability-card tool">
+          <h3>Tool 工具是什么</h3>
+          <ul>
+            <li>工具是 AI 可以调用的外部能力。</li>
+            <li>它像“手脚”：搜索网页、读文件、写文件、运行代码、查数据库、发邮件、生成图片。</li>
+            <li>工具解决的是：AI 怎么真正接触外部世界、执行动作、拿到新信息。</li>
+          </ul>
+        </div>
+        <div class="ability-card model">
+          <h3>Skill 是什么</h3>
+          <ul>
+            <li>Skill 是做某类任务的可复用方法包、说明书或流程模板。</li>
+            <li>它像“专业 SOP”：处理 Excel 要注意什么、做 PPT 的流程、写代码后怎么验证。</li>
+            <li>Skill 解决的是：AI 怎么把某类任务做得更稳定、更专业、更少踩坑。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="table-wrap" style="margin-top:14px">
+        <table>
+          <thead><tr><th>问题</th><th>Tool 工具</th><th>Skill</th></tr></thead>
+          <tbody>
+            <tr><td>本质</td><td>一个可调用的能力或接口</td><td>一套任务方法、规则、流程和经验</td></tr>
+            <tr><td>像什么</td><td>手、脚、眼睛、外接设备</td><td>说明书、工作流、岗位培训手册</td></tr>
+            <tr><td>例子</td><td>浏览器、文件系统、终端、Python、数据库、图片生成器</td><td>Excel 处理 Skill、PPT Skill、代码审查 Skill、浏览器测试 Skill</td></tr>
+            <tr><td>没有它会怎样</td><td>AI 只能说，不能真的做</td><td>AI 能做，但容易流程不稳、漏步骤、格式不专业</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-title" style="font-size:17px;margin-top:18px">互动：从聊天模型一步步搭成 Agent</h3>
+      <div class="builder">
+        <div class="build-controls">
+          <button class="build-toggle" data-stage="model"><span class="check">1</span><span><strong>阶段 1：只有 Model</strong>只能理解并给出文字回答。</span></button>
+          <button class="build-toggle" data-stage="tools"><span class="check">2</span><span><strong>阶段 2：加 Tools</strong>可以搜索、读写文件、运行代码。</span></button>
+          <button class="build-toggle" data-stage="skill"><span class="check">3</span><span><strong>阶段 3：加 Skill</strong>知道做网页这类任务的标准流程。</span></button>
+          <button class="build-toggle" data-stage="memory"><span class="check">4</span><span><strong>阶段 4：加记忆/上下文</strong>能记住目标、约束和中间结果。</span></button>
+          <button class="build-toggle active" data-stage="checker"><span class="check">5</span><span><strong>阶段 5：加检查器</strong>能预览、测试、发现问题并重试。</span></button>
+        </div>
+        <div class="build-output">
+          <div class="agent-diagram">
+            <div class="agent-block on" data-block="model"><strong>模型</strong><span>能理解并回答</span></div>
+            <div class="agent-block on" data-block="tools"><strong>工具</strong><span>能执行动作</span></div>
+            <div class="agent-block on" data-block="skill"><strong>Skill</strong><span>有专业流程</span></div>
+            <div class="agent-block on" data-block="memory"><strong>记忆/上下文</strong><span>能持续推进</span></div>
+            <div class="agent-block on" data-block="checker"><strong>检查器</strong><span>能验证和修正</span></div>
+          </div>
+          <div id="builderResult" class="build-result">
+        <div class="mock-chat">
+          <div class="chat-head"><span>阶段 5：加检查器</span><span>同一个任务：做产品介绍网页</span></div>
+          <div class="chat-body">
+            <div class="bubble user">帮我做一个产品介绍网页，适合初学者看，最好能直接打开。</div>
+            <div class="bubble ai">我已经生成页面并打开预览，检查了交互按钮、Token 统计、文字溢出和移动端布局。发现问题后我会修改，再重新验证，直到可以交付。</div>
+            <div class="action-log">
+              <strong>这一阶段实际发生了什么</strong>
+              <div class="log-item"><span class="log-dot">1</span><span>运行本地预览</span></div><div class="log-item"><span class="log-dot">2</span><span>检查按钮点击是否改变状态</span></div><div class="log-item"><span class="log-dot">3</span><span>检查文字是否溢出</span></div><div class="log-item"><span class="log-dot">4</span><span>发现问题 → 修改 CSS/JS → 再验证</span></div><div class="log-item"><span class="log-dot">5</span><span>输出最终文件链接</span></div>
+            </div>
+          </div>
+        </div>
+        <h3>这就是更完整的 Agent：规划、执行、验证、修正，形成闭环。</h3>
+      </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="developer" class="panel">
+      <h2 class="section-title">第五层：开发者层，API、会员、RAG、微调放在哪里</h2>
+      <div class="grid cols-3">
+        <div class="card"><strong>会员是什么</strong><p>普通用户买的是成品产品：更高额度、更强模型、文件/图片/语音/Agent 等功能。适合直接使用。</p></div>
+        <div class="card"><strong>API 是什么</strong><p>开发者买的是调用模型的能力：你的程序把输入发给模型，再把输出接回自己的产品。适合系统集成。</p></div>
+        <div class="card"><strong>Token 计费是什么</strong><p>API 通常按输入 token、输出 token、缓存、工具调用、图片/音频等资源计费。会员和 API 往往分开计费。</p></div>
+        <div class="card"><strong>RAG</strong><p>先从你的资料库检索相关内容，再交给模型回答。适合企业知识库、客服、内部制度问答。</p></div>
+        <div class="card"><strong>Embedding</strong><p>把文本转成向量，用来搜索“语义相近”的资料。RAG 系统常用它做检索。</p></div>
+        <div class="card"><strong>Fine-tuning</strong><p>用样例继续训练模型，让它稳定学会某种格式、风格或任务。不是所有知识库问题都需要微调。</p></div>
+      </div>
+    </section>
+
+    <section id="token" class="panel">
+      <h2 class="section-title">互动：Token 切词与费用演示器</h2>
+      <div class="token-tool">
+        <div>
+          <textarea id="promptInput">我想用 AI 做一个网页，是应该买会员还是用 API？Agent 又是什么？</textarea>
+          <div class="controls">
+            <select id="modelSelect">
+              <option value="gpt54mini">OpenAI GPT-5.4 mini 估算</option>
+              <option value="gpt55">OpenAI GPT-5.5 估算</option>
+              <option value="claudeSonnet">Claude Sonnet 4.6 估算</option>
+              <option value="deepseekFlash">DeepSeek V4 Flash 估算</option>
+              <option value="geminiFlash">Gemini 3 Flash 估算</option>
+            </select>
+            <input id="outputTokens" type="number" min="0" value="600" aria-label="预计输出 token">
+          </div>
+          <p class="note">这是教学估算，不是某个模型的精确 tokenizer。它用来说明：输入越长、输出越长，API 成本通常越高。</p>
+        </div>
+        <div>
+          <div class="stats">
+            <div class="stat"><b id="inputCount">31</b><span>估算输入 token</span></div>
+            <div class="stat"><b id="outCount">600</b><span>预计输出 token</span></div>
+            <div class="stat"><b id="cost">$0.002723</b><span>估算 API 费用</span></div>
+          </div>
+          <div id="tokens" class="tokens"><span class="tok zh">我</span><span class="tok zh">想</span><span class="tok zh">用</span><span class="tok space">空格</span><span class="tok ">AI</span><span class="tok space">空格</span><span class="tok zh">做</span><span class="tok zh">一</span><span class="tok zh">个</span><span class="tok zh">网</span><span class="tok zh">页</span><span class="tok punc">，</span><span class="tok zh">是</span><span class="tok zh">应</span><span class="tok zh">该</span><span class="tok zh">买</span><span class="tok zh">会</span><span class="tok zh">员</span><span class="tok zh">还</span><span class="tok zh">是</span><span class="tok zh">用</span><span class="tok space">空格</span><span class="tok ">API</span><span class="tok punc">？</span><span class="tok ">Agent</span><span class="tok space">空格</span><span class="tok zh">又</span><span class="tok zh">是</span><span class="tok zh">什</span><span class="tok zh">么</span><span class="tok punc">？</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 class="section-title">互动：我该用哪种 AI 入口？</h2>
+      <div class="chooser">
+        <div class="choice-list">
+          <button class="choice active" data-choice="chat">只是问答、写作、总结资料</button>
+          <button class="choice" data-choice="agent">让 AI 帮我完成一个复杂任务</button>
+          <button class="choice" data-choice="code">让 AI 改代码、做网页、跑测试</button>
+          <button class="choice" data-choice="api">把 AI 接进自己的产品或系统</button>
+          <button class="choice" data-choice="knowledge">做企业知识库/客服</button>
+        </div>
+        <div id="choiceOutput" class="choice-output"><h3>建议：用成品聊天产品</h3><p>比如 ChatGPT、Claude、DeepSeek、Kimi、豆包、通义、Gemini。你买的是界面、额度、文件上传、搜索、图片等产品能力。</p></div>
+      </div>
+    </section>
+
+    <section id="companies" class="panel">
+      <h2 class="section-title">公司地图：看公司时也按五层拆</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>公司/生态</th><th>模型层</th><th>产品层</th><th>Agent/工具</th><th>开发者平台</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>OpenAI</td>
+              <td>GPT 系列、图像、实时语音等</td>
+              <td>ChatGPT、Codex、Deep Research</td>
+              <td>明确 Agent/工具：<span class="pill">ChatGPT agent</span><span class="pill">Deep Research</span><span class="pill">Codex</span><br>典型工具：浏览器、文件/数据分析、代码执行、图像生成、连接器/MCP。</td>
+              <td>OpenAI API、Responses API、Agents SDK；按 token、工具、图像/音频等计费</td>
+            </tr>
+            <tr>
+              <td>Anthropic</td>
+              <td>Claude Opus / Sonnet / Haiku</td>
+              <td>Claude App、Claude Code</td>
+              <td>明确 Agent/工具：<span class="pill">Claude Code</span><br>典型工具：文件读写、终端命令、测试运行、MCP、Artifacts、Computer use / tool use。</td>
+              <td>Claude API、Messages API、工具调用、MCP 生态</td>
+            </tr>
+            <tr>
+              <td>Google</td>
+              <td>Gemini 系列</td>
+              <td>Gemini App、NotebookLM、Workspace 集成</td>
+              <td>明确 Agent/工具：<span class="pill">Jules</span><span class="pill">Gemini Deep Research</span><span class="pill">Gemini Enterprise agents</span><br>典型工具：Google Search grounding、Workspace 连接器、Agent Designer、代码任务执行。</td>
+              <td>Gemini API、AI Studio、Vertex AI、Gemini Enterprise Agent Platform</td>
+            </tr>
+            <tr>
+              <td>DeepSeek</td>
+              <td>DeepSeek V 系列</td>
+              <td>DeepSeek 对话产品</td>
+              <td>未单列自有 Agent 产品名；工具/API 能力：<span class="pill">Tool Calls</span><span class="pill">JSON Output</span><span class="pill">Context Caching</span><br>适合被 LangChain、Dify、Coze 等 Agent 框架接入。</td>
+              <td>DeepSeek API，按输入/输出 token 计费，可接工具调用</td>
+            </tr>
+            <tr>
+              <td>阿里</td>
+              <td>通义千问 Qwen、Qwen Coder / VL / Omni 等</td>
+              <td>通义、夸克、钉钉、通义灵码等生态</td>
+              <td>明确平台/工具：<span class="pill">百炼智能体应用</span><span class="pill">通义灵码</span><br>典型工具：插件/函数调用、知识库/RAG、工作流、多模态、企业应用接入。</td>
+              <td>阿里云百炼 Model Studio，模型调用、应用/智能体构建、知识库等</td>
+            </tr>
+            <tr>
+              <td>百度</td>
+              <td>文心 / 千帆模型生态</td>
+              <td>文心一言、百度搜索/办公/云生态</td>
+              <td>明确平台：<span class="pill">千帆 AgentBuilder</span><span class="pill">智能体应用商店</span><br>典型工具：知识库、插件、工作流、企业数据接入、搜索增强。</td>
+              <td>千帆模型服务、Agent 开发平台、企业应用平台</td>
+            </tr>
+            <tr>
+              <td>字节 / 火山</td>
+              <td>豆包、火山方舟模型服务</td>
+              <td>豆包、飞书/剪映等生态</td>
+              <td>明确 Agent/工具：<span class="pill">扣子 Coze</span><span class="pill">Trae SOLO</span><br>典型工具：Bot/智能体编排、插件、知识库、工作流、AI IDE、代码生成与调试。</td>
+              <td>火山方舟模型服务平台、Coze/扣子平台、企业 API</td>
+            </tr>
+            <tr>
+              <td>Moonshot / Kimi</td>
+              <td>Kimi / Moonshot 模型，长上下文、推理和代码能力</td>
+              <td>Kimi Chat、Kimi 探索版等</td>
+              <td>明确 Agent/工具：<span class="pill">Kimi 探索版</span><span class="pill">Kimi Researcher</span><span class="pill">Kimi Agent / Kimi Code</span><br>典型工具：自主搜索、长文本阅读、代码/研究型任务。</td>
+              <td>Moonshot / Kimi API、长上下文与工具调用能力</td>
+            </tr>
+            <tr>
+              <td>智谱 / Z.ai</td>
+              <td>GLM 系列、视觉/推理/代码模型</td>
+              <td>智谱清言、Z.ai Chat 等</td>
+              <td>明确 Agent：<span class="pill">AutoGLM</span><br>典型工具：浏览器/手机 GUI 操作、语音指令、多模态理解、工具调用。</td>
+              <td>BigModel / Z.ai API、模型服务、工具调用与企业平台</td>
+            </tr>
+            <tr>
+              <td>MiniMax</td>
+              <td>MiniMax 文本、语音、视频等模型</td>
+              <td>海螺 AI、MiniMax Chat 等</td>
+              <td>未单列自有 Agent 产品名；工具/API 能力：<span class="pill">语音</span><span class="pill">视频生成</span><span class="pill">多模态</span><br>更偏内容生成和多模态 API，可被其他 Agent 平台调用。</td>
+              <td>MiniMax API、语音/视频/文本模型服务</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="terms" class="panel">
+      <h2 class="section-title">术语索引：按所在层级理解</h2>
+      <div class="grid cols-3">
+        <div class="card"><strong>模型层｜Token</strong><p>模型读写内容的单位。输入和输出都可能计费。</p></div>
+        <div class="card"><strong>模型层｜上下文窗口</strong><p>模型一次能看见的最大内容长度。</p></div>
+        <div class="card"><strong>模型层｜Prompt</strong><p>你给模型的任务说明、资料和输出要求。</p></div>
+        <div class="card"><strong>能力层｜Tool Call</strong><p>模型决定调用外部工具，例如搜索、函数、数据库、代码执行。</p></div>
+        <div class="card"><strong>Agent 层｜Skill</strong><p>可复用的专项说明或工具包，让 Agent 做特定任务更稳。</p></div>
+        <div class="card"><strong>开发者层｜MCP</strong><p>一种让 AI 连接外部工具和数据源的协议思路，可理解为 AI 工具插线板。</p></div>
+        <div class="card"><strong>开发者层｜RAG</strong><p>先检索资料，再让模型基于资料回答。</p></div>
+        <div class="card"><strong>开发者层｜Embedding</strong><p>把文本转成向量，用于语义搜索。</p></div>
+        <div class="card"><strong>开发者层｜Fine-tuning</strong><p>用样例继续训练模型，让模型稳定学会风格或格式。</p></div>
+      </div>
+      <p class="note">“龙虾”不是 AI 领域通用术语。你如果看到的是 LobeChat，它是一个开源 AI 聊天客户端；如果是别的词，可以继续拿给我看。</p>
+    </section>
+
+    <section class="panel source-list">
+      <h2 class="section-title">参考资料</h2>
+      <p class="note">
+        <a href="https://openai.com/api/pricing/" target="_blank" rel="noreferrer">OpenAI API Pricing</a>；
+        <a href="https://openai.com/index/introducing-chatgpt-agent/" target="_blank" rel="noreferrer">OpenAI ChatGPT agent</a>；
+        <a href="https://openai.com/index/introducing-deep-research/" target="_blank" rel="noreferrer">OpenAI Deep Research</a>；
+        <a href="https://openai.com/index/introducing-codex/" target="_blank" rel="noreferrer">OpenAI Codex</a>；
+        <a href="https://chatgpt.com/pricing/" target="_blank" rel="noreferrer">ChatGPT Pricing</a>；
+        <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noreferrer">Claude Models Overview</a>；
+        <a href="https://claude.com/product/claude-code" target="_blank" rel="noreferrer">Claude Code</a>；
+        <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noreferrer">Gemini API Pricing</a>；
+        <a href="https://jules.google/" target="_blank" rel="noreferrer">Google Jules</a>；
+        <a href="https://cloud.google.com/gemini-enterprise" target="_blank" rel="noreferrer">Gemini Enterprise</a>；
+        <a href="https://api-docs.deepseek.com/quick_start/pricing" target="_blank" rel="noreferrer">DeepSeek Models &amp; Pricing</a>；
+        <a href="https://www.coze.cn/" target="_blank" rel="noreferrer">扣子 Coze</a>；
+        <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noreferrer">阿里云百炼模型文档</a>；
+        <a href="https://cloud.baidu.com/doc/qianfan/index.html" target="_blank" rel="noreferrer">百度千帆平台文档</a>。
+      </p>
+    </section>
+  </main>
+
+  <script>
+    const modelPrices = {
+      gpt54mini: { input: 0.75, output: 4.5 },
+      gpt55: { input: 5, output: 30 },
+      claudeSonnet: { input: 3, output: 15 },
+      deepseekFlash: { input: 0.14, output: 0.28 },
+      geminiFlash: { input: 0.5, output: 3 }
+    };
+
+    const choices = {
+      chat: {
+        title: "建议：用成品聊天产品",
+        body: "比如 ChatGPT、Claude、DeepSeek、Kimi、豆包、通义、Gemini。你买的是界面、额度、文件上传、搜索、图片等产品能力。"
+      },
+      agent: {
+        title: "建议：用 Agent 模式产品",
+        body: "如果任务需要多步推进，例如调研、整理资料、生成报告、检查结果，选择带 Deep Research、Agent、项目执行能力的产品。"
+      },
+      code: {
+        title: "建议：用代码 Agent",
+        body: "比如 Claude Code、Codex、Cursor、Windsurf、Replit Agent。关键是它能读写文件、运行命令、检查页面或测试。"
+      },
+      api: {
+        title: "建议：用 API",
+        body: "如果你要把 AI 放进自己的 App、网站或后台系统，就用 API。你需要自己设计产品逻辑、权限、安全、缓存和成本控制。"
+      },
+      knowledge: {
+        title: "建议：RAG + API/企业平台",
+        body: "企业知识库通常不是先微调，而是先做 RAG：把资料切块、向量化、检索，再让模型基于资料回答。"
+      }
+    };
+
+    const input = document.getElementById("promptInput");
+    const modelSelect = document.getElementById("modelSelect");
+    const outputTokens = document.getElementById("outputTokens");
+    const inputCount = document.getElementById("inputCount");
+    const outCount = document.getElementById("outCount");
+    const cost = document.getElementById("cost");
+    const tokensEl = document.getElementById("tokens");
+    const choiceOutput = document.getElementById("choiceOutput");
+    const builderResult = document.getElementById("builderResult");
+    const stageOrder = ["model", "tools", "skill", "memory", "checker"];
+    const builderStages = {
+      model: {
+        title: "阶段 1：只有 Model",
+        enabled: ["model"],
+        reply: "可以。我会给你一份网页代码示例：包含标题、介绍文案、按钮和简单样式。你需要自己复制代码、保存成 HTML 文件，再用浏览器打开。",
+        logs: ["理解需求：用户想要产品介绍网页", "生成 HTML/CSS 文本", "无法创建文件，也无法检查页面是否能打开"],
+        summary: "这还是普通聊天：能回答，不能真的替你执行。"
+      },
+      tools: {
+        title: "阶段 2：加 Tools",
+        enabled: ["model", "tools"],
+        reply: "我可以直接创建 index.html 和 style.css，并用本地预览打开页面。如果需要，我还能搜索参考资料或读取你已有的品牌素材。",
+        logs: ["调用文件工具：创建 index.html", "调用文件工具：创建 style.css", "调用浏览器/预览工具：打开页面", "风险：如果没有流程约束，可能漏掉移动端或可访问性检查"],
+        summary: "这变成带工具的助手：能做动作，但复杂任务还不一定稳。"
+      },
+      skill: {
+        title: "阶段 3：加 Skill",
+        enabled: ["model", "tools", "skill"],
+        reply: "我会按网页制作 Skill 来做：先明确页面结构，再写 HTML/CSS/JS，保证响应式布局、按钮状态、文案层级，然后进行视觉检查。",
+        logs: ["读取网页制作流程：信息架构 → 布局 → 样式 → 交互 → 验证", "按流程生成文件", "补充移动端布局和长文本换行规则"],
+        summary: "Skill 像 SOP：让 AI 知道这类任务应该怎么专业地做。"
+      },
+      memory: {
+        title: "阶段 4：加记忆/上下文",
+        enabled: ["model", "tools", "skill", "memory"],
+        reply: "我会记住你的约束：页面要给初学者看、不要太技术化、要有交互演示、不要把内部讨论写进页面。后续修改我会沿用这些要求。",
+        logs: ["保留用户目标：AI 初学者能看懂", "保留设计约束：结构清晰、交互优先", "保留历史修改：五层框架、Agent 演示、公司地图"],
+        summary: "有上下文后，Agent 才能连续推进，而不是每一步都像第一次见面。"
+      },
+      checker: {
+        title: "阶段 5：加检查器",
+        enabled: ["model", "tools", "skill", "memory", "checker"],
+        reply: "我已经生成页面并打开预览，检查了交互按钮、Token 统计、文字溢出和移动端布局。发现问题后我会修改，再重新验证，直到可以交付。",
+        logs: ["运行本地预览", "检查按钮点击是否改变状态", "检查文字是否溢出", "发现问题 → 修改 CSS/JS → 再验证", "输出最终文件链接"],
+        summary: "这就是更完整的 Agent：规划、执行、验证、修正，形成闭环。"
+      }
+    };
+
+    function educationalTokenize(text) {
+      const matches = text.match(/[\u4e00-\u9fff]|[A-Za-z]+(?:'[A-Za-z]+)?|\d+(?:\.\d+)?|\s+|[^\sA-Za-z0-9\u4e00-\u9fff]/g) || [];
+      const tokens = [];
+      matches.forEach(part => {
+        if (/^[A-Za-z]/.test(part) && part.length > 6) {
+          for (let i = 0; i < part.length; i += 4) tokens.push(part.slice(i, i + 4));
+        } else {
+          tokens.push(part);
+        }
+      });
+      return tokens;
+    }
+
+    function tokenClass(token) {
+      if (/^\s+$/.test(token)) return "space";
+      if (/^[\u4e00-\u9fff]$/.test(token)) return "zh";
+      if (/^[^\sA-Za-z0-9\u4e00-\u9fff]+$/.test(token)) return "punc";
+      return "";
+    }
+
+    function renderTokenTool() {
+      const tokens = educationalTokenize(input.value);
+      const out = Math.max(0, Number(outputTokens.value || 0));
+      const price = modelPrices[modelSelect.value];
+      const usd = (tokens.length / 1_000_000 * price.input) + (out / 1_000_000 * price.output);
+      inputCount.textContent = tokens.length;
+      outCount.textContent = out;
+      cost.textContent = `$${usd.toFixed(6)}`;
+      tokensEl.innerHTML = tokens.map(token => {
+        const shown = /^\s+$/.test(token) ? "空格" : token.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        return `<span class="tok ${tokenClass(token)}">${shown}</span>`;
+      }).join("");
+    }
+
+    function renderChoice(key) {
+      const item = choices[key];
+      choiceOutput.innerHTML = `<h3>${item.title}</h3><p>${item.body}</p>`;
+      document.querySelectorAll(".choice").forEach(button => {
+        button.classList.toggle("active", button.dataset.choice === key);
+      });
+    }
+
+    function renderBuilder(stage = "model") {
+      const current = builderStages[stage];
+      const activeParts = new Set(current.enabled);
+      document.querySelectorAll(".build-toggle").forEach(button => {
+        button.classList.toggle("active", button.dataset.stage === stage);
+      });
+      document.querySelectorAll(".agent-block").forEach(block => {
+        block.classList.toggle("on", activeParts.has(block.dataset.block));
+      });
+
+      builderResult.innerHTML = `
+        <div class="mock-chat">
+          <div class="chat-head"><span>${current.title}</span><span>同一个任务：做产品介绍网页</span></div>
+          <div class="chat-body">
+            <div class="bubble user">帮我做一个产品介绍网页，适合初学者看，最好能直接打开。</div>
+            <div class="bubble ai">${current.reply}</div>
+            <div class="action-log">
+              <strong>这一阶段实际发生了什么</strong>
+              ${current.logs.map((item, index) => `<div class="log-item"><span class="log-dot">${index + 1}</span><span>${item}</span></div>`).join("")}
+            </div>
+          </div>
+        </div>
+        <h3>${current.summary}</h3>
+      `;
+    }
+
+    document.querySelectorAll(".choice").forEach(button => {
+      button.addEventListener("click", () => renderChoice(button.dataset.choice));
+    });
+
+    document.querySelectorAll(".build-toggle").forEach(button => {
+      button.addEventListener("click", () => renderBuilder(button.dataset.stage));
+    });
+
+    [input, modelSelect, outputTokens].forEach(el => el.addEventListener("input", renderTokenTool));
+    renderTokenTool();
+    renderChoice("chat");
+    renderBuilder("model");
+  </script>
+
+
+</body></html>
